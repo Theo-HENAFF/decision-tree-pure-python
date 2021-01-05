@@ -71,7 +71,7 @@ def info_gain(left, right, current_uncertainty, index="gini"):
     return current_uncertainty - p * getattr(Index, index)(left) - (1 - p) * getattr(Index, index)(right)
 
 
-def load_and_split(csv_name, column):
+def load_and_split(csv_name, column, train_part=0.8):
     """Load the CSV with pandas
     Select the column to keep
     Shuffle the dataset and split it into train and test dataset
@@ -86,8 +86,7 @@ def load_and_split(csv_name, column):
     data = data[column].sample(frac=1, random_state=1)
 
     # Split train and test data
-    train_test_split = 0.8
-    rows_train_test_split = int(train_test_split * len(data))
+    rows_train_test_split = int(train_part * len(data))
 
     train = data.head(rows_train_test_split)
     test = data.tail(len(data) - rows_train_test_split)

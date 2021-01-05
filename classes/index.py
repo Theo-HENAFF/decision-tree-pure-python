@@ -8,6 +8,7 @@ def class_counts(rows):
         counts[label] += 1
     return counts
 
+
 class Index:
 
     def gini(rows):

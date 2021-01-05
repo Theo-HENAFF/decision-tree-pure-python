@@ -2,8 +2,10 @@ from classes.node import Node
 from classes.leaf import Leaf
 from classes.functions import find_best_split, partition
 
+
 def build_tree(rows):
-    """Builds the tree recursively."""
+    """Builds the tree recursively.
+    """
 
     # Partition the dataset on each of the unique attribute
 
@@ -28,6 +30,9 @@ def build_tree(rows):
 
 
 def classify_tree(row, node):
+    """Predict an output given a row of input by going recursively trough the tree.
+    """
+
     # Base case: we've reached a leaf
     if isinstance(node, Leaf):
         return node.predictions
@@ -42,7 +47,8 @@ def classify_tree(row, node):
 
 
 def print_tree(header, node, spacing=""):
-    """Recursive tree printing function."""
+    """Recursive tree printing function.
+    """
 
     # End condition: the node is a leaf
     if isinstance(node, Leaf):
