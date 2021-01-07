@@ -70,25 +70,3 @@ def info_gain(left, right, current_uncertainty, index="gini"):
     p = float(len(left)) / (len(left) + len(right))
     return current_uncertainty - p * getattr(Index, index)(left) - (1 - p) * getattr(Index, index)(right)
 
-
-def load_and_split(csv_name, column, train_part=0.8):
-    """Load the CSV with pandas
-    Select the column to keep
-    Shuffle the dataset and split it into train and test dataset
-    return train and test as python's nested list.
-    """
-
-    import pandas as pd
-
-    data = pd.read_csv(csv_name)
-
-    # Keep only selected columns and shuffle rows
-    data = data[column].sample(frac=1, random_state=1)
-
-    # Split train and test data
-    rows_train_test_split = int(train_part * len(data))
-
-    train = data.head(rows_train_test_split)
-    test = data.tail(len(data) - rows_train_test_split)
-
-    return train.values.tolist(), test.values.tolist()

@@ -1,4 +1,4 @@
-from classes.functions import class_counts
+from classes.class_functions import class_counts
 
 
 class Leaf:

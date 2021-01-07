@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="53eccc13-3f6c-4d40-a123-3502013a8595" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="53eccc13-3f6c-4d40-a123-3502013a8595" name="Default Changelist" comment="add metrics&#10;fix confusion matrix plot">
+      <change afterPath="$PROJECT_DIR$/classes/main_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_analysis.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/class_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/leaf.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/leaf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/à rendre/Theo HENAFF data_analysis 2nd software project.html" beforeDir="false" afterPath="$PROJECT_DIR$/à rendre/Theo HENAFF data_analysis 2nd software project.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +60,8 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -46,7 +69,7 @@
       <recent name="C:\Users\Théo\Documents\decision-tree-pure-python\class" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration default="true" type="NodeJSConfigurationType" singleton="false">
       <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
         <profiling log-folder="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.1\jbr\bin\." />
@@ -82,6 +105,38 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="diabetes_decision_tree" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Miniconda3\envs\btc_bayes\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -98,34 +153,121 @@
       <workItem from="1608917026985" duration="2010000" />
       <workItem from="1608927419423" duration="1272000" />
       <workItem from="1608972831115" duration="15020000" />
-      <workItem from="1609061096395" duration="5529000" />
+      <workItem from="1609061096395" duration="18505000" />
+      <workItem from="1609330766311" duration="809000" />
+      <workItem from="1609837793693" duration="8256000" />
+      <workItem from="1610014905723" duration="8735000" />
     </task>
+    <task id="LOCAL-00001" summary="prettify the code">
+      <created>1609074184777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609074184777</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add metrics&#10;fix confusion matrix plot">
+      <created>1609839789856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609839789856</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="prettify the code" />
+    <MESSAGE value="add metrics&#10;fix confusion matrix plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="add metrics&#10;fix confusion matrix plot" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608927963568">
+    <state x="872" y="358" key="#Intentions" timestamp="1609094255196">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1608927963568" />
+    <state x="872" y="358" key="#Intentions/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609094255196" />
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609842242885">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842242885" />
     <state x="989" y="286" key="#main" timestamp="1608928089455">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="989" y="286" key="#main/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1608928089455" />
-    <state x="760" y="274" key="SettingsEditor" timestamp="1608927742394">
+    <state x="989" y="286" key="#test" timestamp="1609842186375">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="760" y="274" key="SettingsEditor/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1608927742394" />
+    <state x="989" y="286" key="#test/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842186375" />
+    <state x="1027" y="545" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1609094165387">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1027" y="545" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609094165387" />
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1609842626174">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.bottom/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626174" />
+    <state width="2517" height="492" key="GridCell.Tab.0.center" timestamp="1609842626174">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.center/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626174" />
+    <state width="2517" height="492" key="GridCell.Tab.0.left" timestamp="1609842626174">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.left/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626174" />
+    <state width="2517" height="492" key="GridCell.Tab.0.right" timestamp="1609842626174">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.0.right/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626174" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1609842626175">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626175" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1609842626175">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.center/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626175" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1609842626175">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.left/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626175" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1609842626175">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.right/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609842626175" />
+    <state x="989" y="402" key="RollbackChangesDialog" timestamp="1609843007458">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="989" y="402" key="RollbackChangesDialog/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609843007458" />
+    <state x="760" y="274" key="SettingsEditor" timestamp="1609854826867">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="760" y="274" key="SettingsEditor/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609854826867" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608980525005">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="498" height="446" key="SwitcherDM/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1608980525005" />
-    <state width="1288" height="708" key="XDebugger.FullValuePopup" timestamp="1608978751598">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1609839791893">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1288" height="708" key="XDebugger.FullValuePopup/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1608978751598" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609839791893" />
+    <state width="1288" height="708" key="XDebugger.FullValuePopup" timestamp="1610024557823">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="1288" height="708" key="XDebugger.FullValuePopup/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1610024557823" />
     <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1608917097678">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -134,15 +276,15 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="886" y="310" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1608979589989" />
-    <state x="900" y="533" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609072116897">
+    <state x="900" y="533" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610026617456">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="900" y="533" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609072116897" />
+    <state x="900" y="533" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1610026617456" />
     <state x="450" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1608917152532" />
-    <state x="987" y="302" width="585" height="795" key="find.popup" timestamp="1609070558324">
+    <state x="987" y="302" width="585" height="795" key="find.popup" timestamp="1609092351272">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="987" y="302" width="585" height="795" key="find.popup/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609070558324" />
+    <state x="987" y="302" width="585" height="795" key="find.popup/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609092351272" />
     <state x="305" y="133" key="git4idea.merge.GitPullDialog" timestamp="1608917224602">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -151,5 +293,8 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="662" y="297" key="new project wizard/-1080.-271.1080.1880/0.0.2560.1400@0.0.2560.1400" timestamp="1609070527564" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/decision_tree_pure_python$main.coverage" NAME="main Coverage Results" MODIFIED="1609842621157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

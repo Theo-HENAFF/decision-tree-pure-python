@@ -1,6 +1,6 @@
 from classes.node import Node
 from classes.leaf import Leaf
-from classes.functions import find_best_split, partition
+from classes.class_functions import find_best_split, partition
 
 
 def build_tree(rows):
